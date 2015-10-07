@@ -14,13 +14,15 @@
     <button class="btn btn-warning" {{action 'questionFormHide'}}>Nevermind!</button>
   </form>
 {{else}}
-  <button class="btn btn-primary"{{action "questionFormShow"}}>Add a Question</button>
+  <a class="btn btn-primary jv-btn"{{action "questionFormShow"}}>Add a Question</a><br>
 {{/if}}
+
 {{#each model as |question|}}
-<div class="jv-tile">
-  <div class="col-md-4">
+  <div class="col-md-3">
+    <div class="jv-tile">
+
     <h3>{{question.title}} <small>{{question.author}}</small></h3>
-    <button class="btn btn-danger">Delete</button>
+    {{update-tile question=question updateQuestion="updateQuestion"}}
   </div>
 </div>
 {{/each}}
