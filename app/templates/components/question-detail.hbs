@@ -1,0 +1,16 @@
+<h1>{{question.title}} <small>by {{question.author}}</small></h1>
+<hr>
+
+<h3>Answer this Question!</h3>
+<form>
+  <div class="form-group">
+    <label for="answer">Answer</label>
+    {{textarea type="text" name="answer" value=answer class="form-control"}}
+  </div>
+  <div class="form-group">
+    <label for="author">Your username</label>
+    {{input type="text" name="author" value=author class="form-control"}}
+  </div>
+
+  <button class="btn btn-success" {{action 'saveAnswer' question}}>Answer</button>
+</form>

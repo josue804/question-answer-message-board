@@ -21,7 +21,7 @@
   <div class="col-md-3">
     <div class="jv-tile">
 
-    <h3>{{question.title}} <small>{{question.author}}</small></h3>
+    {{#linkTo 'question' question.id}}<h3>{{question.title}} <small>{{question.author}}</small></h3>{{/linkTo}}
     {{update-tile question=question updateQuestion="updateQuestion"}}
   </div>
 </div>
