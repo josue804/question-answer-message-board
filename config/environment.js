@@ -4,6 +4,8 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'question-answer-message-board',
     environment: environment,
+    contentSecurityPolicy: { 'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com" },
+    firebase: 'https://q-and-a-board.firebaseio.com/',
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
